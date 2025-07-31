@@ -1,0 +1,21 @@
+<idea-plugin>
+  <id>com.assistant.infera</id>
+  <name>Infera</name>
+  <vendor>Your Name</vendor>
+
+  <description>
+    A sample plugin to extend IntelliJ with AI features.
+  </description>
+
+  <depends>com.intellij.modules.platform</depends>
+
+  <extensions defaultExtensionNs="com.intellij">
+    <!-- Optional: Register custom actions, tool windows -->
+    <toolWindow id="InferaTool"
+      icon="AllIcons.General.Information"
+      anchor="right"
+      factoryClass="com.assistant.infera.InferaToolWindowFactory"
+      canCloseContents="false"/>
+  </extensions>
+
+</idea-plugin>
