@@ -33,7 +33,8 @@ class InferaToolWindowFactory : ToolWindowFactory {
         panel.add(outputArea)
 
         val contentFactory = ContentFactory.getInstance()
-        val content = contentFactory.createContent(panel, "Copilot Assistant", false)
+        val content = contentFactory.createContent(panel, "Infera Code Assistant", false)
+        toolWindow.title = "Infera Code Assistant"
         toolWindow.contentManager.addContent(content)
     }
 }

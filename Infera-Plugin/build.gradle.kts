@@ -1,7 +1,7 @@
 plugins {
     id("java")
     id("org.jetbrains.kotlin.jvm") version "2.1.0"
-    id("org.jetbrains.intellij.platform") version "2.5.0"
+    id("org.jetbrains.intellij.platform") version "2.7.0"
 }
 
 group = "com.assistant"
@@ -33,8 +33,8 @@ intellijPlatform {
         }
 
         changeNotes = """
-      Initial version
-    """.trimIndent()
+          First release of Infera – your Copilot-like IntelliJ AI assistant.
+        """.trimIndent()
     }
 }
 

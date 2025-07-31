@@ -1,7 +1,10 @@
 <idea-plugin>
+  <idea-version since-build="241.0" until-build="999.*"/>
+  <version>1.0.0</version>
   <id>com.assistant.infera</id>
-  <name>Infera</name>
-  <vendor>Your Name</vendor>
+  <name>Infera AI Assistant</name>
+  <description>Your AI-powered code suggestion assistant</description>
+  <vendor email="rchauhan9102@gmail.com">Rahul Chauhan</vendor>
 
   <description>
     A sample plugin to extend IntelliJ with AI features.
@@ -11,8 +14,8 @@
 
   <extensions defaultExtensionNs="com.intellij">
     <!-- Optional: Register custom actions, tool windows -->
-    <toolWindow id="InferaTool"
-      icon="AllIcons.General.Information"
+    <toolWindow id="Infera"
+      icon="/icons/infera-icon.png"
       anchor="right"
       factoryClass="com.assistant.infera.InferaToolWindowFactory"
       canCloseContents="false"/>
