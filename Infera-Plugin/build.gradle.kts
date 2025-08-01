@@ -24,6 +24,8 @@ dependencies {
         // Add necessary plugin dependencies for compilation here, example:
         // bundledPlugin("com.intellij.java")
     }
+    implementation("com.squareup.okhttp3:okhttp:4.12.0")
+    implementation("org.json:json:20231013")
 }
 
 intellijPlatform {
@@ -39,7 +41,15 @@ intellijPlatform {
 }
 
 tasks {
-    // Set the JVM compatibility versions
+    runIde {
+        // Set maximum and initial heap size
+        maxHeapSize = "2048m"  // Equivalent to -Xmx2048m
+        jvmArgs = listOf(
+            "-Xms512m",                  // initial heap
+            "-Didea.is.internal=true",   // optional for internal mode
+            "-Dplugin.dev.mode=true"     // enables dev mode
+        )
+    }
     withType<JavaCompile> {
         sourceCompatibility = "21"
         targetCompatibility = "21"
